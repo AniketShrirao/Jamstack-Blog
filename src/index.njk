@@ -1,0 +1,22 @@
+---
+layout: base.njk
+pagination:
+  data: postsdata
+  size: 10
+  alias: posts
+---
+{% for post in posts  %}
+  <article>
+        <h1>
+        <a href="#FIXME">{{ post.title }}</a>
+        </h1>
+        <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
+        <p>{{ post.body }}</p>
+        <a href="#FIXME" aria-label="Read more on {{ post.title }}">Read more</a>
+    </article>
+{% endfor %}
+<div class="pagination">
+    {% for i in range(1, 10) -%}
+         <a href="/{{i}}">{{i}}</a>
+    {%- endfor %}
+</div>

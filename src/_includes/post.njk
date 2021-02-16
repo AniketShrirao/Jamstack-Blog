@@ -1,0 +1,9 @@
+---
+layout: index.njk
+permalink: /{{ post.userId }}/{{ post.id }}
+---
+<article class="seperate-post">
+  <h1>{{ title }}</h1> 
+  <time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time> 
+  {{ content | safe }}
+</article>
