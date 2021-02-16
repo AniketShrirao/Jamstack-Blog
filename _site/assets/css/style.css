@@ -130,9 +130,20 @@ li {
     article * {
         margin: 3px;
     }
+
+    article h1 a{
+      pointer-events: none;
+    }
     
     article > a {
       text-decoration: underline;
+      color: black;
+      text-transform: capitalize;
+      font-weight: bold;
+    }
+
+    article p {
+      margin: 20px 3px;
     }
 
     article time {
@@ -148,6 +159,11 @@ li {
         padding: 0px;
         font-size: 32px;
         width: 75%;
+    }
+
+    header a {
+      color: darkred;
+      text-decoration: underline;
     }
 
     header,footer {
